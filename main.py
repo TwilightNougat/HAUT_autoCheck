@@ -96,7 +96,7 @@ def GetNowTime():
 
 #班级获取函数
 def GetDeptId(text):
-    print(text)
+#     print(text)
     try:
         TextStr = text.split('-', 3)
         ClassName = TextStr[2] 
@@ -127,7 +127,7 @@ def GetUserJson(deptId,text,stuNum,userName,RuleId,templateid,token):
             "deptid": deptId,
             "text": text
         },
-        "areaStr": {"streetNumber":"","street":"长椿路辅路","district":"中原区","city":"郑州市","province":"河南省","town":"","pois":"河南工业大学(莲花街校区)","lng":113.55064699999795 + random.random()/1000,"lat":34.83870696238093 + random.random()/1000,"address":"中原区长椿路辅路河南工业大学(莲花街校区)","text":"河南省-郑州市","code":""},
+        "areaStr": {"streetNumber":"","street":"某路","district":"中原区","city":"郑州市","province":"河南省","town":"","pois":"河南工业大学(莲花街校区)","lng":113.55064699999795 + random.random()/1000,"lat":34.83870696238093 + random.random()/1000,"address":"中原区长椿路辅路河南工业大学(莲花街校区)","text":"河南省-郑州市","code":""},
         "reportdate": round(time.time()*1000),
         "customerid": "43",
         "deptid": deptId,
@@ -159,7 +159,7 @@ def check_in(text,stuNum,userName,RuleId,templateid,token):
     sign_url = "https://reportedh5.17wanxiao.com/sass/api/epmpics"
     jsons=GetUserJson(deptId,text,stuNum,userName,RuleId,templateid,token)
     #提交打卡
-    print(jsons)
+#     print(jsons)
     response = requests.post(sign_url, json=jsons,)
     return response
 
