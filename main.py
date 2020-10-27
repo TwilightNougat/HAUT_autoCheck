@@ -96,6 +96,7 @@ def GetNowTime():
 
 #班级获取函数
 def GetDeptId(text):
+    print(text)
     try:
         TextStr = text.split('-', 3)
         ClassName = TextStr[2] 
