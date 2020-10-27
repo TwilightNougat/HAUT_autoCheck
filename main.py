@@ -206,8 +206,8 @@ def WechatPush(title,sckey,success,fail,result):
     }
     try:
         headers = {'Content-Type': 'application/json'}
-        req = requests.post(sckey, headers=headers, data = data)
-        print(req.json())
+        req = requests.post(sckey, headers=headers, data = json.dumps(data))
+        print(req)
         if req.json()["msg"] == '处理成功':
             print("Server酱推送服务成功")
         else:
