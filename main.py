@@ -158,6 +158,7 @@ def check_in(text,stuNum,userName,RuleId,templateid,token):
     sign_url = "https://reportedh5.17wanxiao.com/sass/api/epmpics"
     jsons=GetUserJson(deptId,text,stuNum,userName,RuleId,templateid,token)
     #提交打卡
+    print(jsons)
     response = requests.post(sign_url, json=jsons,)
     return response
 
