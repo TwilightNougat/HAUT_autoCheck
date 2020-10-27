@@ -196,12 +196,17 @@ def WechatPush(title,sckey,success,fail,result):
 
         """
     data = {
-            "text":title,
-            "desp":content
+            "appToken":"AT_pqcH9PILCSE0qotKGfv7cTIr2MgtrhrI",
+  "content":content,
+  "summary":title,
+  "contentType":3,
+  "uids":[
+      "UID_8iMbPWkr8wJYBYSTSvxvSJlY6HY3"
+  ]
     }
     try:
         req = requests.post(sckey,data = data)
-        if req.json()["errmsg"] == 'success':
+        if req.json()["msg"] == '处理成功':
             print("Server酱推送服务成功")
         else:
             print("Server酱推送服务失败")
