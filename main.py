@@ -192,7 +192,6 @@ def WechatPush(title,sckey,success,fail,result):
 ```
 {page}
 ```
-### 😀[收藏](https://github.com/YooKing/HAUT_autoCheck)此项目
 
         """
     data = {
@@ -207,7 +206,7 @@ def WechatPush(title,sckey,success,fail,result):
     try:
         headers = {'Content-Type': 'application/json'}
         req = requests.post(sckey, headers=headers, data = json.dumps(data))
-        print(req)
+#         print(req.json())
         if req.json()["msg"] == '处理成功':
             print("Server酱推送服务成功")
         else:
