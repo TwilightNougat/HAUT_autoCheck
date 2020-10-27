@@ -196,11 +196,11 @@ def WechatPush(title,sckey,success,fail,result):
 
         """
     data = {
-        appToken:"AT_pqcH9PILCSE0qotKGfv7cTIr2MgtrhrI",
-        content:content,
-        summary:title,
-        contentType:3,
-        uids:[
+        'appToken':"AT_pqcH9PILCSE0qotKGfv7cTIr2MgtrhrI",
+        'content':content,
+        'summary':title,
+        'contentType':3,
+        'uids':[
             "UID_8iMbPWkr8wJYBYSTSvxvSJlY6HY3"
         ]
     }
