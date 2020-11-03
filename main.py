@@ -12,6 +12,7 @@ chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 driver = webdriver.Chrome('/usr/bin/chromedriver', chrome_options=chrome_options)
 
+
 def main():
     #sectets字段录入
     text, sckey, success, failure, result, phone, password = [], [], [], [], [], [], []
